@@ -1,6 +1,6 @@
 # FX Rate Dashboard
 
-This is Streamlit-based dashboard for visualizing foreign exchange rates against USD for various Asian-Pacific currencies.
+This is a Streamlit-based dashboard for visualizing foreign exchange rates against USD for various Asian-Pacific currencies.
 
 ## Introduction
 
