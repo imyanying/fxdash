@@ -1,6 +1,6 @@
 # FX Rate Dashboard
 
-A Streamlit-based dashboard for visualizing foreign exchange rates against USD for various Asian-Pacific currencies.
+This is Streamlit-based dashboard for visualizing foreign exchange rates against USD for various Asian-Pacific currencies.
 
 ## Introduction
 
@@ -8,6 +8,7 @@ I built this dashboard to make it easier to compare currency movements in a simp
 
 ## Usage
 Link to the app: https://imyanying-fxdash-app-fbxu6k.streamlit.app/
+
 Use the sidebar controls to:
 1. Select your desired date range
 2. Choose which currencies to display
@@ -44,10 +45,6 @@ Use the sidebar controls to:
 - **Raw Data Display**: View the underlying data in a table format
 - **Responsive Design**: Adapts to different screen sizes
 
-
-
-
-
 ## Supported Currencies
 
 - IDR (Indonesia)
@@ -66,6 +63,4 @@ Use the sidebar controls to:
 ## Data Source
 
 The FX rate data is fetched from Yahoo Finance using the `yfinance` package.
-
-<img width="1916" alt="image" src="https://github.com/user-attachments/assets/02ca7f5d-f220-4aec-8cce-ff939d34cebd" />
 
