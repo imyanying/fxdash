@@ -20,7 +20,7 @@ def get_fx(cur):
 df = pd.DataFrame()
 for cur,country in countries_currency.items():
     data = get_fx(cur)
-    data = data[['Adj Close']]
+    data = data[['Close']]
     data.columns = [country]
     if df.empty:
         df = data
