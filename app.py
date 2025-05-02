@@ -4,6 +4,7 @@ import yfinance as yf
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 from datetime import datetime, timedelta
+import time
 
 # Set page config
 st.set_page_config(
@@ -29,12 +30,16 @@ CURRENCY_PAIRS = {
 }
 
 def get_fx_data(currencies, start_date, end_date):
-    """Fetch FX data for multiple currencies against USD"""
+    """Fetch FX data for multiple currencies against USD with rate limiting"""
     df = pd.DataFrame()
     
     with st.spinner('Fetching FX data...'):
-        for cur, country in currencies.items():
+        for idx, (cur, country) in enumerate(currencies.items()):
             try:
+                # Add a delay between requests to avoid rate limiting
+                if idx > 0:
+                    time.sleep(2)  # Wait 2 seconds between requests
+                
                 data = yf.download(f'USD{cur}=X', start=start_date, end=end_date)
                 if not data.empty and 'Close' in data.columns:
                     data = data[['Close']]
@@ -46,7 +51,22 @@ def get_fx_data(currencies, start_date, end_date):
                 else:
                     st.warning(f"No data available for {cur} ({country})")
             except Exception as e:
-                st.error(f"Error fetching data for {cur} ({country}): {str(e)}")
+                if "Too Many Requests" in str(e):
+                    st.warning(f"Rate limit reached. Waiting before retrying {cur} ({country})...")
+                    time.sleep(5)  # Wait longer if we hit the rate limit
+                    try:
+                        data = yf.download(f'USD{cur}=X', start=start_date, end=end_date)
+                        if not data.empty and 'Close' in data.columns:
+                            data = data[['Close']]
+                            data.columns = [country]
+                            if df.empty:
+                                df = data
+                            else:
+                                df = df.join(data)
+                    except Exception as retry_error:
+                        st.error(f"Failed to fetch data for {cur} ({country}) after retry: {str(retry_error)}")
+                else:
+                    st.error(f"Error fetching data for {cur} ({country}): {str(e)}")
     
     return df
 
