@@ -7,7 +7,8 @@ This is a Streamlit-based dashboard for visualizing foreign exchange rates again
 I built this dashboard to make it easier to compare currency movements in a simpler, more visual way. I'm not an FX trader, I don't need to track real-time fluctuations. Instead, I'm more interested in observing how currencies respond to global and domestic economic news or political events, as well as their longer-term trends. I focus on APAC major economies at work, so the sample currencies I used are from this region. As there are so many currencies involved, putting everything on one chart would get messy, so I use subplots to make it easier to read. This also makes it easier for me to analyze individual currencies while comparing their movements with other APAC peers.
 
 ## Usage
-Link to the app: https://imyanying-fxdash-app-fbxu6k.streamlit.app/
+![Uploading image.png…]()
+
 
 Use the sidebar controls to:
 1. Select your desired date range
