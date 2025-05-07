@@ -104,6 +104,8 @@ def create_fx_plot(df, start_date, end_date, currencies):
 def main():
     st.title("📈 FX Rate Dashboard")
     
+    # Add tip about data download issues
+    st.info("💡 Tip: If you notice some countries' data failed to download, try refreshing the page or adjusting the date range.")
     
     # Sidebar controls
     st.sidebar.header("Settings")
