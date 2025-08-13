@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Visual Charts
+📈 Visual Charts
 """
 """
 Page 1: FX Data Dashboard
