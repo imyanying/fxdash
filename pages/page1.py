@@ -1,3 +1,7 @@
+# -*- coding: utf-8 -*-
+"""
+Visual Charts
+"""
 """
 Page 1: FX Data Dashboard
 This page displays foreign exchange data with interactive date selection and visualization.
