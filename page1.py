@@ -22,9 +22,9 @@ def main():
     # Sidebar for date selection
     st.sidebar.header("📅 Date Range Selection")
     
-    # Default date range (last 30 days)
+    # Default date range (last 365 days)
     default_end = datetime.now()
-    default_start = default_end - timedelta(days=30)
+    default_start = default_end - timedelta(days=365)
     
     # Date inputs
     start_date = st.sidebar.date_input(
@@ -39,12 +39,9 @@ def main():
         max_value=datetime.now().date()
     )
 
-
-    
     # Convert to datetime for fetchdata
     start_datetime = datetime.combine(start_date, datetime.min.time())
     end_datetime = datetime.combine(end_date, datetime.min.time())
-    
 
     # Validation
     if start_date >= end_date:
