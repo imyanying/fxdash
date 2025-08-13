@@ -150,7 +150,7 @@ def main():
                 '3M': '{:.2f}%',
                 '6M': '{:.2f}%',
                 '12M': '{:.2f}%'
-            }).background_gradient(cmap='RdYlGn', subset=['YTD', '1M', '3M', '6M', '12M'], vmin=-10, vmax=10)
+            }).background_gradient(cmap='PiYG', subset=['YTD', '1M', '3M', '6M', '12M'])
             
             st.dataframe(styled_df, use_container_width=True, height=450)
             
