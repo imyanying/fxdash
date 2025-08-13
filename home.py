@@ -38,7 +38,7 @@ def main():
         
         # Navigation button to page1
         if st.button("Go to Visual Charts", type="primary", use_container_width=True):
-            st.switch_page("pages/page1.py")
+            st.switch_page("pages/Visual_Charts.py")
     
     with col2:
         st.markdown("### 📊 Performance Analysis")
@@ -51,7 +51,7 @@ def main():
         
         # Navigation button to page2
         if st.button("Go to Performance View", type="primary", use_container_width=True):
-            st.switch_page("pages/page2.py")
+            st.switch_page("pages/Performance_Analysis.py")
     
     # Additional information
     st.markdown("---")

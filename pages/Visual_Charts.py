@@ -2,10 +2,6 @@
 """
 📈 Visual Charts
 """
-"""
-Page 1: FX Data Dashboard
-This page displays foreign exchange data with interactive date selection and visualization.
-"""
 
 import streamlit as st
 import pandas as pd

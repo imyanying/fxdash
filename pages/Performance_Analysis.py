@@ -1,10 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Performance Analysis
-"""
-"""
-Page 2: Currency Performance Analysis
-This page displays currency performance metrics with YTD, 1M, 3M, 6M, 12M percentage changes.
+📊 Performance Analysis
 """
 
 import streamlit as st
