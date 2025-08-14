@@ -60,7 +60,7 @@ def main():
     
     **Data Source:** Yahoo Finance  
     **Update Frequency:** Real-time data fetching  
-    **Supported Currencies:** Major global currencies vs USD
+    **Supported Currencies:** Major APAC currencies vs USD
    
     ---
     
