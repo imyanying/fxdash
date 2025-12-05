@@ -2,7 +2,7 @@
 
 This is a Streamlit-based dashboard for visualizing foreign exchange rates against USD for various Asian-Pacific currencies.
 
-Link to the Streamlit application:
+Link to the Dashboard:
 
 https://fxdash-ceyutaspltwxjeauad5hvo.streamlit.app/
 
